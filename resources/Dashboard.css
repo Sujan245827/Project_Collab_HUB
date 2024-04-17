@@ -1,0 +1,34 @@
+.navbar {
+    box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, .5);
+  }
+  
+  .muishadow {
+    box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, .5);
+  }
+  
+  .buttonhover:hover {
+    margin-left: 0px;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #D3D3D3;
+    box-shadow: 0 0 0 0.2rem #D3D3D3;
+  }
+  
+  .nav-control:focus {
+    border-color: #D3D3D3;
+    box-shadow: 0 0 0 0.1rem #D3D3D3;
+  }
+  
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  
+  #pchlogo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }

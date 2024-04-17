@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const AdminNavbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Perform logout logic here
+    navigate('/');
+  };
+
   return (
     <Navbar bg="white" expand="lg" fixed="top" className="navbar-light py-2 ps-3">
       <Container>
@@ -11,13 +18,13 @@ const AdminNavbar = () => {
           <img
             id="pchlogo"
             className="d-none d-sm-block"
-            src="/img/pchlogo.png"
+            src={process.env.PUBLIC_URL + '/img/pchlogo.png'}
             alt="PCH Logo"
             style={{ width: '200px' }}
           />
           <img
             className="d-block d-sm-none"
-            src="img/pchlogo.png"
+            src={process.env.PUBLIC_URL + '/img/pchlogo.png'}
             alt="PCH Logo"
             style={{ width: '130px' }}
           />
@@ -54,9 +61,9 @@ const AdminNavbar = () => {
               <span className="textcolor">Notification</span>
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/" className="btn btn-danger">
+            <Button variant="danger" onClick={handleLogout} className="ms-2">
               Logout
-            </Nav.Link>
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

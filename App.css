@@ -1,3 +1,41 @@
+body {
+  background-color:#f2f3f4;
+}
+
+.btn-primary{
+  background-color:#24628f;
+  border:solid #24628f;
+}
+
+.btn-primary:hover{
+  background-color:#f36d38;
+  border:solid #f36d38;
+}
+
+.btn-secondary{
+  background-color:#24628f;
+  border:solid #24628f;
+}
+
+.btn-secondary:hover{
+  background-color:#f36d38;
+  border:solid #f36d38;
+}
+
+.btn-danger:hover{
+  background-color:#f36d38;
+  border:solid #f36d38;
+}
+
+aside {
+  background-color:#f2f3f4;
+}
+h1, h2, h3, h4, h5, h6  {
+  color: #24628f;
+  
+}
+
+
 /* Navbar styles */
 .navbar {
   box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.5);

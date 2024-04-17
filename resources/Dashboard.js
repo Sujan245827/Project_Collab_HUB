@@ -1,8 +1,33 @@
-import React from 'react';
-import Footer from './Footer';
+import React, { useEffect } from 'react';
 import AdminNavbar from './AdminNavbar';
+import Footer from './Footer';
+import './Dashboard.css';
+import { drawChart, drawChart2, drawColumnChart } from './charts';
 
 const Dashboard = () => {
+  useEffect(() => {
+    // Load Google Charts library
+    const script = document.createElement('script');
+    script.src = 'https://www.gstatic.com/charts/loader.js';
+    script.async = true;
+    script.onload = () => {
+      // Load the Visualization API and the corechart package
+      window.google.charts.load('current', { packages: ['corechart'] });
+
+      // Set a callback to run when the Google Visualization API is loaded
+      window.google.charts.setOnLoadCallback(() => {
+        drawChart();
+        drawChart2();
+        drawColumnChart();
+      });
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <>
       <AdminNavbar />
@@ -11,7 +36,50 @@ const Dashboard = () => {
         <div className="container">
           <div className="row">
             <aside className="bg-white col-md-3">
-              {/* Add the content for the sidebar */}
+              <div className="card text-center align-items-center mb-3">
+                <span className="pt-1"></span>
+                <div className="card-body">
+                  <p>Total Users</p>
+                  <div className="row align-items-center">
+                    <div className="">
+                      <img src={process.env.PUBLIC_URL + '/img/ui.png'} className="card-img-top img-fluid" alt="..." style={{ maxWidth: '50%' }} />
+                    </div>
+                    <div className="">
+                      <p style={{ fontSize: '20px' }}>423</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card text-center align-items-center mb-3">
+                <span className="pt-1"></span>
+                <div className="card-body">
+                  <p>Groups Created</p>
+                  <div className="row align-items-center">
+                    <div className="">
+                      <img src={process.env.PUBLIC_URL + '/img/gi.png'} className="card-img-top img-fluid" alt="..." style={{ maxWidth: '50%' }} />
+                    </div>
+                    <div className="">
+                      <p style={{ fontSize: '20px' }}>98</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card text-center align-items-center mb-3">
+                <span className="pt-1"></span>
+                <div className="card-body">
+                  <p>Ongoing Projects</p>
+                  <div className="row align-items-center">
+                    <div className="">
+                      <img src={process.env.PUBLIC_URL + '/img/pi.png'} className="card-img-top img-fluid" alt="..." style={{ maxWidth: '50%' }} />
+                    </div>
+                    <div className="">
+                      <p style={{ fontSize: '20px' }}>106</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </aside>
 
             <div className="col-md-9">
