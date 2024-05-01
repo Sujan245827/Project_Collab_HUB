@@ -1,6 +1,5 @@
 import React from 'react';
 import AdminNavbar from './AdminNavbar';
-import Footer from './Footer';
 
 const Notifications = () => {
   return (
@@ -11,8 +10,6 @@ const Notifications = () => {
         <h1>Notifications</h1>
         {/* Add your notifications functionality here */}
       </section>
-
-      <Footer />
     </>
   );
 };

@@ -1,0 +1,29 @@
+.group-task {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .group-task h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .group-task table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .group-task th,
+  .group-task td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .group-task th {
+    background-color: #e9ecef;
+    font-weight: bold;
+  }

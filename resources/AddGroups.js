@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './AdminNavbar';
-import Footer from './Footer';
 import './AddGroups.css';
 
 const AddGroups = () => {
@@ -131,8 +130,6 @@ const AddGroups = () => {
           </div>
         </div>
       )}
-
-      <Footer />
     </>
   );
 };

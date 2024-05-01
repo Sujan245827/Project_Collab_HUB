@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AdminNavbar from './AdminNavbar';
-import Footer from './Footer';
+
 
 const Students = () => {
   return (
@@ -71,8 +71,6 @@ const Students = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

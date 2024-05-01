@@ -1,6 +1,5 @@
 import React from 'react';
 import AdminNavbar from './AdminNavbar';
-import Footer from './Footer';
 import './ManageGroups.css';
 
 const ManageGroups = () => {
@@ -57,8 +56,6 @@ const ManageGroups = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

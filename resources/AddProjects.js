@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './AdminNavbar';
-import Footer from './Footer';
 import './AddProjects.css';
 
 const AddProjects = () => {
@@ -65,10 +64,8 @@ const AddProjects = () => {
           </div>
         </div>
       )}
-
-      <Footer />
     </>
   );
 };
 
-export default AddProjects;
+export default AddProjects; 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import AdminNavbar from './AdminNavbar';
-import Footer from './Footer';
+
 import './Dashboard.css';
 import { drawChart, drawChart2, drawColumnChart } from './charts';
 
@@ -114,7 +114,7 @@ const Dashboard = () => {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 };

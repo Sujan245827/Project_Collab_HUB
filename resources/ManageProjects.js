@@ -1,6 +1,5 @@
 import React from 'react';
 import AdminNavbar from './AdminNavbar';
-import Footer from './Footer';
 import './ManageProjects.css';
 
 const ManageProjects = () => {
@@ -65,8 +64,6 @@ const ManageProjects = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };
